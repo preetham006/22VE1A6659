@@ -1,73 +1,91 @@
-URL Shortener Web App
-A React-based URL shortener built with Vite and Material-UI, running on http://localhost:3000. It allows shortening up to 5 URLs with client-side validation, custom shortcodes, 30-minute default validity, and click tracking. Features a statistics page and client-side routing.
-Features
 
-Shorten up to 5 URLs at once
-Client-side validation for URLs and shortcodes
-Custom shortcodes (alphanumeric, 4-10 characters)
-Default 30-minute validity, customizable
-Statistics page with click tracking
-Client-side routing with react-router-dom
-Material-UI styling with Roboto font
-Simulated Logging Middleware (replace with your own)
+# URL Shortener
 
-Prerequisites
+A React-based URL shortener application built with Vite. This app allows users to shorten URLs, view statistics, and handle redirects using shortcodes.
 
-Node.js (v18 or higher)
-npm (v8 or higher)
+## Features
 
-Setup
+- Shorten long URLs to short, shareable links
+- View statistics about shortened URLs
+- Redirect to original URLs using shortcodes
+- Error handling with user-friendly alerts
+- Built with React, React Router, and Material UI
 
-Clone the repository:git clone <repository-url>
-cd url-shortener
+## Installation
 
+1. Clone the repository or download the source code.
+2. Navigate to the project directory:
 
-Install dependencies:npm install
+```bash
+cd my-react-app/url_shortener
+```
 
+3. Install dependencies:
 
-Start the development server:npm run dev
+```bash
+npm install
+```
 
-The app runs on http://localhost:3000.
+## Running the App
 
-Project Structure
-url_shortener/
-├── public/
-│   └── vite.svg
+To start the development server with hot reload:
+
+```bash
+npm run dev
+```
+
+Open your browser and go to the URL shown in the terminal (usually http://localhost:3000).
+
+## Building for Production
+
+To build the app for production:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+Below is the repository structure for the URL Shortener app:
+
+```
+my-react-app/url_shortener/
+├── index.html
+├── package.json
+├── vite.config.js
+├── README.md
 ├── src/
+│   ├── App.jsx
+│   ├── main.jsx
 │   ├── pages/
 │   │   ├── UrlShortenerPage.jsx
 │   │   ├── StatsPage.jsx
 │   │   └── RedirectPage.jsx
 │   ├── utils/
-│   │   ├── logger.js
-│   │   └── helpers.js
+│   │   ├── helpers.js
+│   │   └── logger.js
 │   ├── App.css
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css (optional)
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
+│   ├── index.css
+│   └── assets/
+│       └── react.svg
+└── public/
+    └── vite.svg
+  
 
-Usage
+## Dependencies
 
-Shorten URLs: On the homepage (/), enter up to 5 URLs, optional validity (minutes), and custom shortcodes. Click "Shorten URLs" to generate short links.
-View Statistics: Navigate to /stats to see shortened URLs, creation/expiry dates, and click details.
-Redirect: Access shortened URLs (e.g., /abc123) to redirect to the original URL with click tracking.
+- React 18
+- React Router DOM 6
+- Material UI (MUI)
+- Emotion (CSS-in-JS)
+- Vite (build tool)
 
-Dependencies
+## License
 
-@mui/material, @emotion/react, @emotion/styled for styling
-@fontsource/roboto for typography
-react-router-dom for routing
-@vitejs/plugin-react for Vite React support
-
-Notes
-
-Replace src/utils/logger.js with your Pre-Test Setup Logging Middleware.
-The app uses localStorage for persistence.
-Runs on port 3000 (configured in vite.config.js).
-
-License
-MIT License
+This project is private and not published under any license.
